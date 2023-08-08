@@ -6,6 +6,7 @@ import pygal
 
 bar = pygal.Bar()
 bar2 = pygal.Bar()
+bar3 = pygal.Bar()
 #the url of the api we are using
 ACT_url = "https://www.data.act.gov.au/resource/8mi2-3658.json"
 
@@ -17,7 +18,10 @@ list_data = json.loads(raw_data.text)
 eddies_data = []
 School_Data = []
 for item in list_data:
-    School_Data.append(item)
+
+    if item['school_name'] == "St Clare's College":
+        School_Data.append(item)
+
     if item['school_name'] == "St Edmund's College Canberra":
         eddies_data.append(item)
 
@@ -26,7 +30,6 @@ for item in eddies_data:
 
 for item in School_Data:
     bar2.add(item['year_level'], int(item['students']))
-    print(item['year_level'])
 
 bar.render_to_file('Eddies_Student_Vol.svg')
-bar2.render_to_file('All_Student_Vol.svg')
+bar2.render_to_file('Clares_Student_Vol.svg')
