@@ -11,6 +11,7 @@ for line in file.read().splitlines():
     output = open("Output_" + str(filename), "a")
     if X == 0:
         output.writelines(str(line)+ "\n")
+        print(line)
         X = 1
 
     elif X == 1:
@@ -20,5 +21,5 @@ for line in file.read().splitlines():
     output.close()
 
 file.close()
-
+print("Complete")
 
