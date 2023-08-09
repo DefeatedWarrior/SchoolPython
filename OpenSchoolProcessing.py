@@ -45,7 +45,6 @@ for item in list_data:
 for item in School_Data:
     bar.add(item['year_level'], int(item['students']))
 
-eg.close()
 if School != "":
     bar.render_to_file(str(School)+'.svg')
 
