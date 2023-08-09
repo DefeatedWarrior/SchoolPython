@@ -4,7 +4,7 @@ Import Pygal, Json and Requests.
 
 It will create 2 Files, `Eddies_Student_Vol.svg` and `Clares_Student_Vol.svg`
 
-
+\n
 
 OpenSchoolProcessing.py is a script that takes a School Name and Graphs the Students Per Year Level.
 
