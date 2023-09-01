@@ -1,19 +1,16 @@
 import statistics
 import sys
 
-File = open("Data.csv", "r")
-Output = open("Out.csv", "w")
+File = open("CSV/Data.csv", "r")
+Output = open("CSV/Out.csv", "w")
 Array = []
-Room_NR = []
 
 for line in File.read().splitlines():
     if line:
         lines = line.split(",")
         if lines[1] == "Student":
             Array.append(str(lines[0]) + "," + str(lines[2]))
-            Room_NR.append(lines[0])
 
-Room_NR = list(dict.fromkeys(Room_NR))
 
 results = {}
 

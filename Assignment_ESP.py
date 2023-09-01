@@ -8,7 +8,7 @@ Room = input("Room NR (Rxxx): ")
 Network = input("Network Name (Blank for Student): ")
 
 
-output = open("Data.csv", "a")
+output = open("CSV/Data.csv", "a")
 
 if Network == "":
     Network = "Student"
